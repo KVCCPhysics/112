@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-01-06 Tue 15:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Phy112 HW1.1 - Electric Field</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
+</div>
+<div id="content" class="content">
+<h1 class="title">Phy112 HW1.1 - Electric Field</h1>
+<div id="outline-container-org0713b82" class="outline-2">
+<h2 id="org0713b82">Problem 1.1.1</h2>
+<div class="outline-text-2" id="text-org0713b82">
+<p>
+A commuter airplane starts from an airport and takes the route shown in the below figure. The plane first flies to city A, located \(175~km\) away in a direction \(30.0^\circ\) north of east. Next, it flies for \(150~km ~~ 20^\circ\) west of north, to city B. Finally, the plane flies \(190~km\) due west, to city C. Find the location of city C relative to the location of the starting point. [\(245~km\) at \(21.4^\circ\) west of north]
+</p>
+
+
+<div id="org225b1dc" class="figure">
+<p><img src="./img/hw1-1_fig1.png" alt="hw1-1_fig1.png" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2a5f9e5" class="outline-2">
+<h2 id="org2a5f9e5">Problem 1.1.2</h2>
+<div class="outline-text-2" id="text-org2a5f9e5">
+<p>
+Three point charges are located at the corners of an equilateral triangle as shown below. Find the magnitude and direction of the net electric force on the \(2.00 ~ \mu C\) charge.[\(0.437~N\) at \(-85.3^\circ\) from the \(+x\)-axis]
+</p>
+
+
+<div id="org91b34ca" class="figure">
+<p><img src="./img/hw1-1_fig2.png" alt="hw1-1_fig2.png" width="400px" />
+</p>
+</div>
+
+<p>
+\newpage
+</p>
+</div>
+</div>
+<div id="outline-container-org3f809c3" class="outline-2">
+<h2 id="org3f809c3">Problem 1.1.3</h2>
+<div class="outline-text-2" id="text-org3f809c3">
+<p>
+Two small metallic spheres, each of mass \(m=0.20~g\), are suspended as pendulums by light strings from a common point as shown in the below left figure. The spheres are given the same electric charge, and it is found that they come to equilibrium when each string is at an angle of \(\theta = 5.0^\circ\) with the vertical. If each string has length \(L=30.0~cm\), what is the magnitude of the charge on each sphere?[\(7.2~nC\)]
+</p>
+
+
+
+<div id="org4daac79" class="figure">
+<p><img src="./img/hw1-1_fig3.png" alt="hw1-1_fig3.png" width="800px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7862350" class="outline-2">
+<h2 id="org7862350">Problem 1.1.4</h2>
+<div class="outline-text-2" id="text-org7862350">
+<p>
+A small block of mass \(m\) and charge \(Q\) is placed on an insulated, frictionless, inclined plane of angle \(\theta\) as in the above right figure. An electric field is applied parallel to the incline.
+</p>
+
+<ol class="org-ol">
+<li>Find an expression for the magnitude of the electric field so the block to remain at rest.[\(E = mg\, sin(\theta)/|Q|\)]</li>
+<li>if \(m=5.40~g\), \(Q=-7.00~ \mu C\), and \(\theta = 25.0^\circ\), determine the magnitude and direction of the electric field that enables the block to remain at rest on the incline.[\(3190~N/C\) down the incline]</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4d82ad0" class="outline-2">
+<h2 id="org4d82ad0">Problem 1.1.5</h2>
+<div class="outline-text-2" id="text-org4d82ad0">
+<p>
+Three charges are at the corners of an equilateral triangle, as shown in the below figure. Calculate the electric field at a point midway between the two charges on the x-axis.
+</p>
+
+
+<div id="orgbf33474" class="figure">
+<p><img src="./img/hw1-1_fig4.png" alt="hw1-1_fig4.png" width="400px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org29799ae" class="outline-2">
+<h2 id="org29799ae">Problem 1.1.6</h2>
+<div class="outline-text-2" id="text-org29799ae">
+<p>
+sketch the electric field pattern around:
+</p>
+
+<ol class="org-ol">
+<li>Two positive point charges of magnitude \(1~\mu C\) placed close together.</li>
+<li>Two negative point charges of \(-2~\mu C\), placed close together.</li>
+<li>Two point charges of \(+1~\mu C\) and \(-2~\mu C\), placed close together.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8b7077b" class="outline-2">
+<h2 id="org8b7077b">Problem 1.1.7</h2>
+<div class="outline-text-2" id="text-org8b7077b">
+<p>
+An electric field of intensity \(3.50~kN/C\) is applied along the x-axis. Calculate the electric flux through a rectangular plane \(0.350~m\) wide and \(0.700~m\) long if
+</p>
+
+<ol class="org-ol">
+<li>the plane is parallel to the \(yz-\)plane.</li>
+<li>the plane is parallel to the \(xy-\)plane.</li>
+<li>the plane contains the \(y-\)axis and its normal makes an angle of \(40.0^\circ\) with the \(x-\)axis.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0ad7aae" class="outline-2">
+<h2 id="org0ad7aae">Problem 1.1.8</h2>
+<div class="outline-text-2" id="text-org0ad7aae">
+<p>
+A point charge \(q\) is located at the center of a spherical shell of radius \(a\) that has a charge \(-q\) uniformly distributed on its surface. Find the electric field
+</p>
+
+<ol class="org-ol">
+<li>for all points outside the spherical shell.</li>
+<li>for a point inside the shell a distance \(r\) from the center.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4bbf086" class="outline-2">
+<h2 id="org4bbf086">Problem 1.1.9</h2>
+<div class="outline-text-2" id="text-org4bbf086">
+<p>
+A very large nonconducting plate lying in the \(xy-plane\) carries a charge per unit area of \(\sigma\). A second such plate located at \(z = 2.00~cm\) and oriented parallel to the \(xy-\)plane carries a charge per unit area of \(-2\sigma\). Find the electric field (Hint: make a sketch of each plate separately and use superposition to find the overall field)
+</p>
+
+<ol class="org-ol">
+<li>for \(z<0.0 ~cm\) [\(\sigma / (2 \epsilon_0)\) in neg z direction]</li>
+<li>for \(0<z<2.0 ~cm\) [\(3\sigma / (2 \epsilon_0)\) in pos z direction]</li>
+<li>for \(z>2.0~cm\) [\(\sigma / (2 \epsilon_0)\) in pos z direction]</li>
+</ol>
+</div>
+</div>
+</div>
+</body>
+</html>
