@@ -3,11 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-01-06 Tue 17:32 -->
+<!-- 2026-01-07 Wed 12:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Phy112 Lab1.3</title>
-<meta name="author" content="Patrick Malsom" />
+<title>Phy112 Lab 1.3 - Current and Resistance</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -193,13 +192,310 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<base target="_blank">
+<style type="text/css"> blockquote {background:#cdd; padding: 3px 10px; border: 1px solid; }</style>
+<style type="text/css"> .example {background:#FFFCF6; margin-top: -16px;}</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
 </div>
 <div id="content" class="content">
-<h1 class="title">Phy112 Lab1.3</h1>
+<h1 class="title">Phy112 Lab 1.3 - Current and Resistance</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgacce22a">1. The Multimeter</a></li>
+<li><a href="#org51bf7db">2. Create two simple circuits</a></li>
+<li><a href="#org528d961">3. Create a complicated circuit</a></li>
+<li><a href="#orga6fb113">4. Kirchoffs rules to find current</a></li>
+<li><a href="#org91066fa">5. Create the circuit and measure the current</a></li>
+</ul>
+</div>
+</div>
+<p>
+This lab will introduce the basic building blocks of circuit building and require the use of a breadboard to create your desired circuit.
+First you will create a a basic circuit and make some measurements using a multimeter.
+Then you will use multiple resistors in series and parallel to create a more complicated circuit topology. Finally you will verify your measured results using Kirchoff&rsquo;s junction and loop rules.
+</p>
+<div id="outline-container-orgacce22a" class="outline-2">
+<h2 id="orgacce22a"><span class="section-number-2">1.</span> The Multimeter</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The <b>multimeter</b> is one of the most important devices in electronics. Electricity is normally invisible. This single device will measure multiple electric properties: Voltage [V], Current [A], resistance [\(\Omega\)], capacitance [F], temperature [C] etc, and allow you to be safe around electricity. The device is designed to be robust and durable for use in field measurements of many stationary analog signals.
+</p>
+
+<p>
+The wires of a multimeter are named <b>probes</b>. There are multiple ports at the bottom of the device where you can plug probes in, but be cautious about which port you use!
+</p>
+<ul class="org-ul">
+<li>COM is used to return the electrons back to the device (ground),</li>
+<li>V is safe for the device (high impedance), all measurements use this port except for current.</li>
+<li>10A is used for current measurements (low impedance, can blow the fuse)</li>
+</ul>
+
+<p>
+<b>Multimeters can be damaged when using the 10A port. This port is ONLY used when measuring current!</b> All other measurements use the high impedance port (V). The measurement of current requires a low resistance path to let the electrons flow. This port is essentially an open circuit (tiny resistance between it and ground), and you can easily damage circuitry with an open circuit.
+</p>
+
+<p>
+A <b>breadboard</b> is a quick way to prototype a circuit. It consists of rows of holes which you can insert wire ends and power-rails on the outside to supply voltage.
+</p>
+
+<p>
+The holes are not all connected. Hold the breadboard upright
+</p>
+
+<p>
+while holding the board horizontally, there are two rows on the very top and very bottom which are connected (power rails). The center has many columns of 5 connected holes, and a gap
+</p>
+
+<p>
+<b>Resistors</b> do what their name suggests, resist the flow of electricity. They are abundant in many circuits, and thus the cost of the elements must be minimized. To decrease cost, the labeling on the resistors is encoded in bands of color. Thee is a way to read these bands, but it is not important for this class (ask if you are curious). The best way to find the value of a resistor is to use the multimeter to measure it.
+</p>
+
+<p>
+To measure resistance: Hook up the red wire of the multimeter to the Voltage port and the black wire to the COM port, and turn the knob on the multimeter to resistance \(\Omega\). Push the point of the probe down into the breadboard next to the wire you wish to measure, or make a connection with a clip.
+</p>
+</div>
+<div id="outline-container-org14c428d" class="outline-3">
+<h3 id="org14c428d"><span class="section-number-3">1.1.</span> Measure the resistor values</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Take care to read the units. The multiplier will change on the screen from \(\Omega\), \(k\Omega\), \(M\Omega\).
+</p>
+
+<p>
+\(R_1 = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(R_2 = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(R_3 = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(R_4 = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(R_5 = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>All five resistors should be of similar magnitude (ex: 1k, 1k, 2k, 5k, 5k).</li>
+<li>You should have at least 3 unique values of resistor in your set.</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org51bf7db" class="outline-2">
+<h2 id="org51bf7db"><span class="section-number-2">2.</span> Create two simple circuits</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+create a series circuit with any two of your above resistors. <b>Series</b> connections require the electrons to flow into R1 and then also forced to flow into R2.
+</p>
+</div>
+<div id="outline-container-org1fce603" class="outline-3">
+<h3 id="org1fce603"><span class="section-number-3">2.1.</span> Series</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+\[R_{series} = R_1 + R_2\]
+</p>
+
+<p>
+\(R_{series} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<p>
+create a parallel circuit with any two of your above resistors. <b>Parallel</b> connections require the electrons to encounter a junction in the circuit and the electrons will have a choice to go left or go right. In the simplest physical setup, the resistors will look stacked on top of each other.
+</p>
+</div>
+</div>
+<div id="outline-container-org7e6e45e" class="outline-3">
+<h3 id="org7e6e45e"><span class="section-number-3">2.2.</span> Parallel</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+\[\frac{1}{R_{parallel}} = \frac{1}{R_1} + \frac{1}{R_2}\]
+</p>
+
+<p>
+\(R_{parallel} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Verify that your measurements match the theory.</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org528d961" class="outline-2">
+<h2 id="org528d961"><span class="section-number-2">3.</span> Create a complicated circuit</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Use all five resistors to create the following circuit on your breadboard.
+</p>
+
+
+<div id="orgaf41beb" class="figure">
+<p><img src="./img/lab1-3_fig1.png" alt="lab1-3_fig1.png" width="600px" />
+</p>
+</div>
+
+<p>
+Set up the circuit and measure the resistance between points A and B:
+</p>
+
+<p>
+Measured \(R_{eq} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<p>
+Use equivalent resistor techniques to find the value of this resistor network in theory. Recall the simplification formulae for resistors:
+</p>
+
+<p>
+\[R_{series} = R_1 + R_2 \qquad \qquad \frac{1}{R_{parallel}} = \frac{1}{R_1} + \frac{1}{R_2}\]
+</p>
+
+<p>
+Calculated \(R_{eq} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Create a sketch of each intermediate simplified circuit.</li>
+<li>Make sure the measured and calculated values match. Try to remake the circuit and review the math if they are different.</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orga6fb113" class="outline-2">
+<h2 id="orga6fb113"><span class="section-number-2">4.</span> Kirchoffs rules to find current</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+If the device has multiple interconnected branches (almost always the case for real circuits), a common technique is to use the conservation of charge (junction) and conservation of energy (loop) to create equations which model the circuit. These are known as Kirchoffs rules.
+</p>
+
+
+<div id="org2ea0844" class="figure">
+<p><img src="./img/lab1-3_fig2.png" alt="lab1-3_fig2.png" width="400px" />
+</p>
+</div>
+
+<p>
+For simplicity, you can use a battery for each voltage source (measure the voltage, but you should find ~1.5V for a standard battery). You may also use a bench power supply if you prefer to use unique voltages.
+</p>
+
+<p>
+Practice the steps of Kirchoffs rules:
+</p>
+
+<ul class="org-ul">
+<li>label each junction with a dot (two junctions, duplicate)</li>
+<li>label each branch with a unique current (three branches)</li>
+<li>draw a loop for each section of the circuit (two loops)</li>
+</ul>
+
+<p>
+The loop and junction rules will then create a system of equations to solve to find the current flow in each branch of the circuit. Practice writing out these rules (1 junction and 2 loop equations) to solve for the unknown currents (3 currents).
+</p>
+
+<ul class="org-ul">
+<li><b>Loop rule</b>: sum of the input currents is equal to the sum of the output currents.</li>
+<li><b>Junction rule</b>: a complete loop will have no voltage change. Current in same direction as loop is a voltage drop (downhill). Current in the opposite direction as loop is a voltage gain (uphill).</li>
+</ul>
+</div>
+<div id="outline-container-org15a5200" class="outline-3">
+<h3 id="org15a5200"><span class="section-number-3">4.1.</span> Calculated currents:</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Finally, solve for the three currents:
+</p>
+
+<p>
+\(I_{1} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(I_{2} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(I_{3} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Label currents, junctions and loops for the above circuit</li>
+<li>Write out Kirchoffs equations (3 total) and verify they are correct with the instructor</li>
+<li>Solve for the 3 unique currents (in mA)</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org91066fa" class="outline-2">
+<h2 id="org91066fa"><span class="section-number-2">5.</span> Create the circuit and measure the current</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Create the full circuit as shown above. Current measurements should only be made after the circuit is fully connected.
+</p>
+
+<p>
+<b>You must break the circuit to measure the current</b>. Figure out which branch you wish to measure and unplug a resistor at that point. Then reconfigure your multimeter to measure current. Use the multimeter as a wire to reconnect the break you made.
+</p>
+</div>
+<div id="outline-container-org0b75a77" class="outline-3">
+<h3 id="org0b75a77"><span class="section-number-3">5.1.</span> Measured currents:</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Break the circuit in each branch and measure the current with the multimeter:
+</p>
+
+<p>
+\(I_{1} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(I_{2} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(I_{3} = \_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

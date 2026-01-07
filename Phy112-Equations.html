@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-01-07 Wed 14:39 -->
+<!-- 2026-01-07 Wed 14:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Phy112 HW2.2 - Induction</title>
+<title>Phy112 Equations</title>
 <meta name="author" content="Patrick Malsom" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -231,126 +231,236 @@
 <style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
 </div>
 <div id="content" class="content">
-<h1 class="title">Phy112 HW2.2 - Induction</h1>
-<div id="outline-container-org84aac6d" class="outline-2">
-<h2 id="org84aac6d">Problem 2.2.1</h2>
-<div class="outline-text-2" id="text-org84aac6d">
+<h1 class="title">Phy112 Equations</h1>
+<div id="outline-container-org895d511" class="outline-2">
+<h2 id="org895d511">General</h2>
+<div class="outline-text-2" id="text-org895d511">
 <p>
-A bar magnet is positioned near a coil of wire, as shown in the below figure. What is the direction of the current in the resistor when the magnet is moved
-</p>
-
-<ol class="org-ol">
-<li>to the left?</li>
-<li>to the right?</li>
-</ol>
-
-
-<div id="org2543d3d" class="figure">
-<p><img src="./img/hw2-2_fig1.jpg" alt="hw2-2_fig1.jpg" width="500px" />
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-orgc25de2b" class="outline-2">
-<h2 id="orgc25de2b">Problem 2.2.2</h2>
-<div class="outline-text-2" id="text-orgc25de2b">
-<p>
-Two circular loops of wire surround an insulating rod as shown below. Loop 1 carries a current \(I\) in the clockwise direction when viewed from the left end. If loop 1 moves toward loop 2, which remains stationary, what is the direction of the induced current in loop 2 when viewed from the left end?
-</p>
-
-
-<div id="org88294b8" class="figure">
-<p><img src="./img/hw2-2_fig2.jpg" alt="hw2-2_fig2.jpg" width="500px" />
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org29daf3e" class="outline-2">
-<h2 id="org29daf3e">Problem 2.2.3</h2>
-<div class="outline-text-2" id="text-org29daf3e">
-<p>
-Consider the arrangement shown in the below figure. Assume \(R=6.00~\Omega\), \(\ell = 1.20~m\) and a uniform \(2.50~T\) magnetic field is directed <b>into</b> the page. At what speed should the bar be moved to produce a current of \(0.500~A\) in the resistor?
-</p>
-
-
-<div id="org198f438" class="figure">
-<p><img src="./img/hw2-2_fig3.jpg" alt="hw2-2_fig3.jpg" />
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-orgeadf701" class="outline-2">
-<h2 id="orgeadf701">Problem 2.2.4</h2>
-<div class="outline-text-2" id="text-orgeadf701">
-<p>
-A wire loop of radius \(0.30~m\) lies so that an external magnetic field of magnitude \(0.30~T\) is perpendicular to the loop. The field reverses its direction and its magnitude changes to \(0.20~T\) in \(1.5~s\). Find the magnitude of the average induced emf in the loop during this time.
-</p>
-</div>
-</div>
-<div id="outline-container-org9d79ca8" class="outline-2">
-<h2 id="org9d79ca8">Problem 2.2.5</h2>
-<div class="outline-text-2" id="text-org9d79ca8">
-<p>
-A rectangular coil with resistance \(R\) has \(N\) turns, each of length \(\ell\) and width \(w\), as shown below. The coil moves into a uniform magnetic field \(\vec{B}_{in}\) with constant velocity \(\vec{v}\). What are the magnitude and direction of the total magnetic force on the coil
-</p>
-
-<ol class="org-ol">
-<li>as it enters the magnetic field?</li>
-<li>as it moves within the field?</li>
-<li>as it leaves the field?</li>
-</ol>
-
-
-<div id="org9b53d2f" class="figure">
-<p><img src="./img/hw2-2_fig4.jpg" alt="hw2-2_fig4.jpg" width="500px" />
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org0db1bf9" class="outline-2">
-<h2 id="org0db1bf9">Problem 2.2.6</h2>
-<div class="outline-text-2" id="text-org0db1bf9">
-<p>
-A solenoid of radius \(2.5~cm\) has \(400\) turns and a length of \(20~cm\).
-</p>
-
-<ol class="org-ol">
-<li>Find its inductance.</li>
-<li>find the rate at which current must change through it to produce an emf \(\mathcal{E}\) of \(75~mV\).</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-orgeba8b3e" class="outline-2">
-<h2 id="orgeba8b3e">Problem 2.2.7</h2>
-<div class="outline-text-2" id="text-orgeba8b3e">
-<p>
-A \(25~mH\) inductor, an \(8.0~\Omega\) resistor, and a \(6.0~V\) battery are connected in series. The switch is closed at \(t=0\).
+\[\sum \vec{F} = m \vec{a}\]
 </p>
 
 <p>
-Find the voltage drop across the resistor
+\[F_{\textnormal{centripital}} = \frac{m v^2}{r}\]
 </p>
-
-<ol class="org-ol">
-<li>at \(t=0\).</li>
-<li>after one time constant has passed.</li>
-</ol>
-
-<p>
-Find the voltage drop across the inductor
-</p>
-
-<ol class="org-ol">
-<li>at \(t=0\).</li>
-<li>after one time constant has passed.</li>
-</ol>
 </div>
 </div>
-<div id="outline-container-org89fff0e" class="outline-2">
-<h2 id="org89fff0e">Problem 2.2.8</h2>
-<div class="outline-text-2" id="text-org89fff0e">
+<div id="outline-container-org5eafe72" class="outline-2">
+<h2 id="org5eafe72">Electric Fields</h2>
+<div class="outline-text-2" id="text-org5eafe72">
 <p>
-an AC power generator produces \(50~A\) (rms) at \(3600~V\). The voltage is stepped up to \(100000~V\) by an ideal transformer and the energy is transmitted through a long distance power line that has a resistance of \(100~\Omega\). What percentage of the power delivered by the generator is dissipated as heat in the power line?
+\[F = k_e \frac{|q_1| |q_2|}{r^2}\]
+</p>
+
+<p>
+\[\vec{E}= \frac{\vec{F}}{q}\]
+</p>
+
+<p>
+\[E = k_e \frac{q}{r^2}~~~~\leftarrow \textnormal{point charge}\]
+</p>
+
+<p>
+\[E = \frac{\sigma}{2 \epsilon_0} ~~~~\leftarrow \textnormal{charged plane}\]
+</p>
+
+<p>
+\[\Phi_E = EA = \frac{Q_{in}}{\epsilon_0}\]
+</p>
+</div>
+</div>
+<div id="outline-container-org34a737c" class="outline-2">
+<h2 id="org34a737c">Electric Potential</h2>
+<div class="outline-text-2" id="text-org34a737c">
+<p>
+\[\Delta PE = - W_{AB} = -q E_x \Delta x\]
+</p>
+
+<p>
+\[\Delta V = - E_x \Delta x\]
+</p>
+
+<p>
+\[V = k_e \frac{q}{r}\]
+</p>
+
+<p>
+\[PE = k_e \frac{q_1 \cdot q_2}{r}\]
+</p>
+
+<p>
+\[k_e = 8.99 \cdot 10^9 ~\frac{N \cdot m^2}{C}\]
+</p>
+
+<p>
+\[\epsilon_0 = \frac{1}{4\pi k_e} = 8.85 \cdot 10^{-12} ~ \frac{C^2}{N\cdot m^2}\]
+</p>
+</div>
+</div>
+<div id="outline-container-org403194b" class="outline-2">
+<h2 id="org403194b">Capacitors</h2>
+<div class="outline-text-2" id="text-org403194b">
+<p>
+\[Q = C~ \Delta V\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgc491762" class="outline-2">
+<h2 id="orgc491762">Current and Resistance</h2>
+<div class="outline-text-2" id="text-orgc491762">
+<p>
+\[\Delta V = I ~R\]
+</p>
+
+<p>
+\[R = \rho \frac{\ell}{A}\]
+</p>
+
+<p>
+\[\mathcal{P} = I \Delta V\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgf1a65a1" class="outline-2">
+<h2 id="orgf1a65a1">RC circuits</h2>
+<div class="outline-text-2" id="text-orgf1a65a1">
+<p>
+\[\tau = R C\]
+</p>
+
+<p>
+\[q = Q(1-e^{-t/\tau})~~~~\leftarrow \textnormal{charging}\]
+</p>
+
+<p>
+\[\Delta V = \mathcal{E} (1-e^{-t/\tau})~~~~\leftarrow \textnormal{charging}\]
+</p>
+
+<p>
+\[q = Qe^{-t/\tau}~~~~\leftarrow \textnormal{discharging}\]
+</p>
+
+<p>
+\[\Delta V = \mathcal{E} e^{-t/\tau}~~~~\leftarrow \textnormal{ discharging}\]
+</p>
+</div>
+</div>
+<div id="outline-container-org4945c57" class="outline-2">
+<h2 id="org4945c57">Magnetism</h2>
+<div class="outline-text-2" id="text-org4945c57">
+<p>
+\[F = qvB \sin(\theta) = \ell I B \sin(\theta)\]
+</p>
+
+<p>
+\[r=\frac{mv}{qB}\]
+</p>
+
+<p>
+\[\mu_0 = 4\pi*10^{-7}~H/m\]
+</p>
+
+<p>
+\[B = \frac{\mu I }{2 \pi r} \qquad \leftarrow \textnormal{Current line}\]
+</p>
+
+<p>
+\[B = \mu \frac{N }{\ell} I \qquad \leftarrow \textnormal{Solenoid}\]
+</p>
+
+<p>
+\[\Phi_B = B A \cos(\theta)\]
+</p>
+
+<p>
+\[\mathcal{E} = - N\frac{\Delta \Phi_B}{\Delta t}\]
+</p>
+
+<p>
+\[\mathcal{E} = - L\frac{\Delta I}{\Delta t}\]
+</p>
+
+<p>
+\[L = \frac{N \Phi_B}{I}\]
+</p>
+
+<p>
+\[I = \frac{\mathcal{E}}{R} \left( 1 - e^{-t/\tau} \right)\]
+</p>
+
+<p>
+\[\tau = L/R\]
+</p>
+</div>
+</div>
+<div id="outline-container-org3a6614a" class="outline-2">
+<h2 id="org3a6614a">Optics</h2>
+<div class="outline-text-2" id="text-org3a6614a">
+<p>
+\[n_1 \sin(\theta_1) = n_2 \sin(\theta_2)\]
+</p>
+
+<p>
+\[\sin(\theta_c) = \frac{n_2}{n_1}\]
+</p>
+
+<p>
+\[M = -q/p\]
+</p>
+
+<p>
+\[\frac1f = \frac1p + \frac1q\]
+</p>
+
+<p>
+\[d\, \sin(\theta) = m \lambda\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgf63fb73" class="outline-2">
+<h2 id="orgf63fb73">Relativity</h2>
+<div class="outline-text-2" id="text-orgf63fb73">
+<p>
+\[c= \frac{1}{\sqrt{\mu_0\,\varepsilon_0}} = \lambda \, f\]
+</p>
+
+<p>
+\[c= 299792458 m/s \approx 3e8 \, m/s\]
+</p>
+
+<p>
+\[\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\]
+</p>
+
+<p>
+\[L = \frac{L_0}{\gamma} \qquad \Delta t = \gamma \Delta t_0\]
+</p>
+
+<p>
+\[E_\textnormal{rest} = mc^2 \qquad KE_{\textnormal{rel}} = (\gamma -1) mc^2\]
+</p>
+
+<p>
+\[E^2 = (pc)^2 + (mc^2)^2\]
+</p>
+</div>
+</div>
+<div id="outline-container-org35ee522" class="outline-2">
+<h2 id="org35ee522">Radioactivity</h2>
+<div class="outline-text-2" id="text-org35ee522">
+<p>
+\[E=hf=\frac{hc}{\lambda}\]
+</p>
+
+<p>
+\[\Delta x \Delta p = \frac{h}{4\pi}\]
+</p>
+
+<p>
+\[R = \frac{\Delta N}{\Delta t}\]
+</p>
+
+<p>
+\[N = N_0 e^{-\lambda\,t}\]
 </p>
 </div>
 </div>

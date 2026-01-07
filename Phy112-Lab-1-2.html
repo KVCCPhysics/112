@@ -3,11 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-01-06 Tue 17:32 -->
+<!-- 2026-01-07 Wed 09:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Phy112 Lab1.2</title>
-<meta name="author" content="Patrick Malsom" />
+<title>Phy112 Lab 1.2 - Equipotential Surfaces</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -193,13 +192,200 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<base target="_blank">
+<style type="text/css"> blockquote {background:#cdd; padding: 3px 10px; border: 1px solid; }</style>
+<style type="text/css"> .example {background:#FFFCF6; margin-top: -16px;}</style>
 </head>
 <body>
 <div id="preamble" class="status">
 <style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
 </div>
 <div id="content" class="content">
-<h1 class="title">Phy112 Lab1.2</h1>
+<h1 class="title">Phy112 Lab 1.2 - Equipotential Surfaces</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org77a586b">1. Part 1: Electrical Equipment</a></li>
+<li><a href="#orgd26de1c">2. Part 2: Mapping the Electric Potential</a></li>
+<li><a href="#org012c90f">3. Part 3: Contour Plot of the Electric Potential</a></li>
+</ul>
+</div>
+</div>
+<p>
+This lab is used to gain a visual understanding of electric potential lines and electric field lines. The electric potential lines are charted for two given shapes. The Field lines indicate the shape of the electric field. We do not have an easy method to directly observe the electric field, but we can map the electric potentials (voltage) on the surface of the conducting paper. The equipotential lines formed by connecting a series of voltage points will allow us to view the electric field for a given shape.
+</p>
+<div id="outline-container-org77a586b" class="outline-2">
+<h2 id="org77a586b"><span class="section-number-2">1.</span> Part 1: Electrical Equipment</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8ab6689" class="outline-3">
+<h3 id="org8ab6689"><span class="section-number-3">1.1.</span> Part 1.1: Power Supply</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+You are supplied a variable power supply to use for lab experiments. These power supplies are fairly safe for use around humans, but you can trick them into supplying a dangerous amount of power. Please use caution around the power supply and know that it is pumping out electrons which can hurt you if abused.
+</p>
+
+<p>
+These power supplies have positive and negative terminals to which connect with banana plugs. This lab will only use the DC current (AC current comes later in the course).
+</p>
+</div>
+</div>
+<div id="outline-container-org0edc7c0" class="outline-3">
+<h3 id="org0edc7c0"><span class="section-number-3">1.2.</span> Part 1.2: Multi-Meter</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+A multi-meter is the swiss-army knife for basic electronic circuits. It is not the most advanced device, but can be used to measure many useful things like voltage, current resistance, polarity, capacitance.
+</p>
+
+<p>
+There are a few key points to keep in mind when using a multimeter. The most important of which has to deal with the port at the bottom of the device. One of these ports is labeled COM and should always have the black wire connected to it. The other ports measure different things, one measures amperage (A) and the other measures everything else, including voltage and resistance. Be sure to plug into the correct port for the measurement you are attempting to make.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd26de1c" class="outline-2">
+<h2 id="orgd26de1c"><span class="section-number-2">2.</span> Part 2: Mapping the Electric Potential</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+You will now map the electric potential for a couple of interesting shapes: circular charges and charged parallel plates. Please follow the following procedure on both pieces of conductive paper:
+</p>
+
+<ol class="org-ol">
+<li>The metallic pins will remain in place for the entire measurement. The multimeter will have COM connected to ground and use the positive probe to make voltage measurements.</li>
+
+<li>Set the voltmeter to read voltage and turn on the power supply.</li>
+
+<li>Adjust the voltage setting on the power supply until the <b><b>voltage</b></b> reads 12v.</li>
+
+<li>After connecting the multimeter to ground, use the red lead of the multimeter to find 10v on the paper by <b><b>lightly</b></b> tracing the probe across the surface of the paper. Mark a dozen or so different measurements of 10v on the graphing paper. These measurements should fall along a line. Make a sketch this 10V equipotential line on the graphing paper.</li>
+
+<li>Repeat step 4 for 8V, 6V, 4V, and 2V. The Equipotential lines will loosely follow the shape of the metal outlines.</li>
+
+<li>Equipotential lines are perpendicular to the electric field lines.  Start at the positive terminal and trace a single line to the negative terminal. Make sure to draw each segment of the line perpendicular to the electric potential line. Draw enough field lines to capture the general shape of the field around the metal outlines.</li>
+
+<li>Repeat steps 1-7 for the second piece of conducting paper.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org012c90f" class="outline-2">
+<h2 id="org012c90f"><span class="section-number-2">3.</span> Part 3: Contour Plot of the Electric Potential</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<b><b>Please use the Sage code to complete this section of the lab.</b></b>
+</p>
+
+<p>
+Now lets use SageMath to visualize the two geometries. Log on to the Canvas course page and find the code snippets to paste into <a href="https://sagecell.sagemath.org/">https://sagecell.sagemath.org/</a>. Please evaluate all code snippets before proceeding to answer the questions below:
+</p>
+
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Do your maps roughly follow the contour lines created on the computer? Please compare and contrast.</li>
+<li>Extend the length of the bar (variable named &ldquo;el&rdquo;) to create a constant electric field. How long does the plate need to be before the field becomes uniform?</li>
+<li>Imagine you had a &ldquo;free&rdquo; charge, which can be released into the electric field. How would this positively charged particle move in an electric field? (use the stream plot to answer this question)</li>
+<li>How would a positively charged particle move in an electric potential? (use the contour plot to answer this question)</li>
+</ul>
+</blockquote>
+</div>
+<div id="outline-container-org7b1645d" class="outline-3">
+<h3 id="org7b1645d"><span class="section-number-3">3.1.</span> E-field and E-potential of Point Charges</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #9ca0a4;">### </span><span style="color: #9ca0a4;">elctric field and electric potential of point charges</span>
+
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">charge,x-pos,y-pos,z-pos</span>
+<span style="color: #6a1868;">q1</span>,<span style="color: #6a1868;">x1</span>,<span style="color: #6a1868;">y1</span>,<span style="color: #6a1868;">z1</span> = 1,0,1,0 <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">red</span>
+<span style="color: #6a1868;">q2</span>,<span style="color: #6a1868;">x2</span>,<span style="color: #6a1868;">y2</span>,<span style="color: #6a1868;">z2</span> = 0,0,-1,0 <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">black</span>
+<span style="color: #6a1868;">q3</span>,<span style="color: #6a1868;">x3</span>,<span style="color: #6a1868;">y3</span>,<span style="color: #6a1868;">z3</span> = 0,1,0,0 <span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">blue</span>
+
+<span style="color: #9ca0a4;">#  </span><span style="color: #9ca0a4;">Set z-axis bounds. Used in plot3d's add_condition</span>
+<span style="color: #6a1868;">zlim</span> = <span style="color: #e45649;">lambda</span> x,y,z: <span style="color: #a626a4;">bool</span>( -3 &lt; z &lt; 5 )
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Z-level to display</span>
+<span style="color: #6a1868;">zplane</span>=0.0
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Import libraries and declare variables to sage</span>
+<span style="color: #e45649;">import</span> numpy <span style="color: #e45649;">as</span> np
+var(<span style="color: #50a14f;">'q x y z x0 y0 z0'</span>)
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Draw charges as circles</span>
+<span style="color: #6a1868;">plt1</span>=circle((x1,y1),q1/10,fill=<span style="color: #b751b6;">True</span>,zorder=9,color=<span style="color: #50a14f;">'red'</span>)
+<span style="color: #6a1868;">plt1</span>+=circle((x2,y2),q2/10,fill=<span style="color: #b751b6;">True</span>,zorder=9,color=<span style="color: #50a14f;">'black'</span>)
+<span style="color: #6a1868;">plt1</span>+=circle((x3,y3),q3/10,fill=<span style="color: #b751b6;">True</span>,zorder=9,color=<span style="color: #50a14f;">'blue'</span>)
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Electric Field: Vector field has x, y, and z fields at every point in space</span>
+Ex(<span style="color: #6a1868;">x</span>,<span style="color: #6a1868;">y</span>,<span style="color: #6a1868;">z</span>,<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>,<span style="color: #6a1868;">z0</span>) = q/((x-x0)^2 + (y-y0)^2 + (z-z0)^2)^(3/2) * (x-x0)
+Ey(<span style="color: #6a1868;">x</span>,<span style="color: #6a1868;">y</span>,<span style="color: #6a1868;">z</span>,<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>,<span style="color: #6a1868;">z0</span>) = q/((x-x0)^2 + (y-y0)^2 + (z-z0)^2)^(3/2) * (y-y0)
+Ez(<span style="color: #6a1868;">x</span>,<span style="color: #6a1868;">y</span>,<span style="color: #6a1868;">z</span>,<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>,<span style="color: #6a1868;">z0</span>) = q/((x-x0)^2 + (y-y0)^2 + (z-z0)^2)^(3/2) * (z-z0)
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Stream plot the Electric FIELD: sum(Ex) and sum(Ey)</span>
+<span style="color: #6a1868;">plt1</span>+=streamline_plot( (Ex(x,y,zplane,q1,x1,y1,z1) + Ex(x,y,zplane,q2,x2,y2,z2) + Ex(x,y,zplane,q3,x3,y3,z3), Ey(x,y,zplane,q1,x1,y1,z1) + Ey(x,y,zplane,q2,x2,y2,z2)+ Ey(x,y,zplane,q3,x3,y3,z3) ) , (x,-3,3), (y,-2,2),axes=<span style="color: #b751b6;">False</span>,density=2)
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Electric Potential: Scalar so only one number for each point in space</span>
+V(<span style="color: #6a1868;">x</span>,<span style="color: #6a1868;">y</span>,<span style="color: #6a1868;">z</span>,<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>,<span style="color: #6a1868;">z0</span>) = q/sqrt((x-x0)**2+(y-y0)**2+(z-z0)**2)
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Contour plot of the Electric POTENTIAL</span>
+<span style="color: #6a1868;">plt1</span>+=contour_plot(V(x,y,zplane,q1,x1,y1,z1)+V(x,y,zplane,q2,x2,y2,z2)+V(x,y,zplane,q3,x3,y3,z3),(x,-3,3),(y,-2,2),fill=<span style="color: #b751b6;">False</span>, plot_points=150,contours=np.arange(-10,10,0.5),label_inline=<span style="color: #b751b6;">True</span>,)
+
+plt1.show(figsize=12)
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">3D figure of the electric potential</span>
+<span style="color: #6a1868;">plt2</span>=plot3d(V(x,y,zplane,q1,x1,y1,z1)+V(x,y,zplane,q2,x2,y2,z2)+V(x,y,zplane,q3,x3,y3,z3),(x,-3,3),(y,-3,3)).add_condition(zlim)
+plt2.show(viewpoint=[[-1,0,0],60])
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Electric Field in 3D</span>
+<span style="color: #6a1868;">plt3</span>=plot_vector_field3d((Ex(x,y,z,q1,x1,y1,z1) + Ex(x,y,z,q2,x2,y2,z2) + Ex(x,y,z,q3,x3,y3,z3),Ey(x,y,z,q1,x1,y1,z1) + Ey(x,y,z,q2,x2,y2,z2)+ Ey(x,y,z,q3,x3,y3,z3) ,Ez(x,y,z,q1,x1,y1,z1) + Ez(x,y,z,q2,x2,y2,z2)+ Ez(x,y,z,q3,x3,y3,z3)) ,(x,-3,3), (y,-3,3), (z,-3,3),plot_points=12,center_arrows=<span style="color: #b751b6;">True</span>)
+plt3.show(viewpoint=[[-1,0,0],60])
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org597fad3" class="outline-3">
+<h3 id="org597fad3"><span class="section-number-3">3.2.</span> E-field and E-potential of charged parallel plates</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+change the variable &ldquo;bar<sub>length</sub>&rdquo; in this script:
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Parallel lines of charge (model of a Capacitor)</span>
+<span style="color: #6a1868;">bar_length</span>=1
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Declare variables and E-field functions</span>
+<span style="color: #e45649;">import</span> numpy
+var(<span style="color: #50a14f;">'q x y x0 y0'</span>)
+Ex(<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>) = q/((x-x0)^2 + (y-y0)^2)^(3/2) * (x-x0)
+Ey(<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>) = q/((x-x0)^2 + (y-y0)^2)^(3/2) * (y-y0)
+V(<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>) = q/numpy.sqrt((x-x0)^2 + (y-y0)^2)
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Create a line of charges uniformly over the length of the bar</span>
+<span style="color: #6a1868;">charges</span>=numpy.arange(-bar_length/2,bar_length/2+0.001,0.1)
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Draw sketch of the charged plates, one at +1 and one at -1</span>
+<span style="color: #6a1868;">plate_len</span>=bar_length/2-0.07
+<span style="color: #6a1868;">plt1</span>=plot(+1.05,(x,-<span style="color: #a626a4;">min</span>(plate_len,3),<span style="color: #a626a4;">min</span>(plate_len,3)),thickness=<span style="color: #50a14f;">"20"</span>,color=<span style="color: #50a14f;">"red"</span>,zorder=10)
+<span style="color: #6a1868;">plt1</span>+=plot(-1.05,(x,-<span style="color: #a626a4;">min</span>(plate_len,3),<span style="color: #a626a4;">min</span>(plate_len,3)),thickness=<span style="color: #50a14f;">"20"</span>,color=<span style="color: #50a14f;">"black"</span>,zorder=10)
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Electric Field (stream plot)</span>
+<span style="color: #6a1868;">plt1</span>+=streamline_plot((<span style="color: #a626a4;">sum</span>([Ex(1,i,1) <span style="color: #e45649;">for</span> i <span style="color: #e45649;">in</span> charges])+<span style="color: #a626a4;">sum</span>([Ex(-1,i,-1) <span style="color: #e45649;">for</span> i <span style="color: #e45649;">in</span> charges]),<span style="color: #a626a4;">sum</span>([Ey(1,i,1) <span style="color: #e45649;">for</span> i <span style="color: #e45649;">in</span> charges])+<span style="color: #a626a4;">sum</span>([Ey(-1,i,-1) <span style="color: #e45649;">for</span> i <span style="color: #e45649;">in</span> charges]) ), (x,-3,3), (y,-2,2),axes=<span style="color: #b751b6;">False</span>,density=2)
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Electric Potential (contour plot)</span>
+<span style="color: #9ca0a4;">#</span><span style="color: #9ca0a4;">plt1+=contour_plot(sum([(V(1,i,1)+V(-1,i,-1))/len(charges) for i in charges]),(x,-3,3),(y,-2,2),fill=False, plot_points=150,contours=numpy.arange(-1,1,0.05))</span>
+show(plt1,figsize=12)
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">3D plot of the electric potential</span>
+<span style="color: #6a1868;">zlim</span> = <span style="color: #e45649;">lambda</span> x,y,z: <span style="color: #a626a4;">bool</span>( -3 &lt; z &lt; 3 )
+<span style="color: #6a1868;">plt2</span>=plot3d(<span style="color: #a626a4;">sum</span>([V(.1,i,1)+V(-.1,i,-1) <span style="color: #e45649;">for</span> i <span style="color: #e45649;">in</span> charges]),(x,-3,3),(y,-3,3)).add_condition(zlim)
+<span style="color: #9ca0a4;">#</span><span style="color: #9ca0a4;">plt2.show(aspect_ratio=[1, 1,0.5])</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

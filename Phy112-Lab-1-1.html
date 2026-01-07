@@ -3,11 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-01-06 Tue 17:32 -->
+<!-- 2026-01-07 Wed 09:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Phy112 Lab1.1</title>
-<meta name="author" content="Patrick Malsom" />
+<title>Phy112 Lab 1.1 - The Electric Field</title>
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -193,13 +192,396 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<base target="_blank">
+<style type="text/css"> blockquote {background:#cdd; padding: 3px 10px; border: 1px solid; }</style>
+<style type="text/css"> .example {background:#FFFCF6; margin-top: -16px;}</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <style type="text/css">body{ max-width:800px; margin: auto;font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}table.center{margin-left:auto; margin-right:auto;}</style>
 </div>
 <div id="content" class="content">
-<h1 class="title">Phy112 Lab1.1</h1>
+<h1 class="title">Phy112 Lab 1.1 - The Electric Field</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb1fae60">1. Part 1: Sketch the Electric Field</a></li>
+<li><a href="#orgc350882">2. Part 2: Calculate the Electric Field</a></li>
+<li><a href="#org536b6f6">3. Part 3: Force on a charge</a></li>
+<li><a href="#orga1e7244">4. Part 4: Stream Plot of the Electric Field</a></li>
+<li><a href="#org42982e9">5. Part 5: First look at Gauss&rsquo; Law</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb1fae60" class="outline-2">
+<h2 id="orgb1fae60"><span class="section-number-2">1.</span> Part 1: Sketch the Electric Field</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Roll a six-sided dice (6) times and record the rolls:
+</p>
+
+<p>
+Roll 1: \(\_\_\_\_\_\_\_\_\_ \rightarrow q_1\) in \(\mu C\) <br />
+Roll 2: \(\_\_\_\_\_\_\_\_\_ \rightarrow x_1\) in \(cm\) <br />
+Roll 3: \(\_\_\_\_\_\_\_\_\_ \rightarrow y_1\) in \(cm\) <br />
+</p>
+
+<p>
+Roll 4: \(\_\_\_\_\_\_\_\_\_ \rightarrow q_2\) in \(\mu C\) <br />
+Roll 5: \(\_\_\_\_\_\_\_\_\_ \rightarrow x_2\) in \(cm\) <br />
+Roll 6: \(\_\_\_\_\_\_\_\_\_ \rightarrow y_2\) in \(cm\) <br />
+</p>
+
+<p>
+Roll 7: \(\_\_\_\_\_\_\_\_\_ \rightarrow q_3\) in \(\mu C\) <br />
+Roll 8: \(\_\_\_\_\_\_\_\_\_ \rightarrow x_3\) in \(cm\) <br />
+Roll 9: \(\_\_\_\_\_\_\_\_\_ \rightarrow y_3\) in \(cm\) <br />
+</p>
+
+<p>
+Obtain a piece of graphing paper from the instructor and draw these three charges on your page. Draw out these three charges on the graphing paper and label each charge.
+</p>
+
+<p>
+Recall the electric field points away from positive charges. Draw the approximate electric field created from each charge at the point \((0,0)~cm\) and at the point \((8,8)~cm\). Attempt to draw the vector at the correct length (corresponding to the magnitude) and direction for each charge. The field vector should be longer when the charge is large and when the charge is close to the point.
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Roll the dice a total of 9 times</li>
+<li>Make the sketch of the E-Field. Ask the instructor if you are lost</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgc350882" class="outline-2">
+<h2 id="orgc350882"><span class="section-number-2">2.</span> Part 2: Calculate the Electric Field</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The electric field is a vector, and this means you must calculate direction as well as magnitude. Lets start by calculating the angle which the E-field points from each charge (hint: use arctan) and the distance which the charge is away from the point
+</p>
+
+<p>
+Calculate distance and angle for the point (0,0):
+</p>
+
+<p>
+\(r_1 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~  \theta_1 = \_\_\_\_\_\_\_\_\_\_\) <br />
+\(r_2 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~  \theta_2 = \_\_\_\_\_\_\_\_\_\_\) <br />
+\(r_3 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~  \theta_3 = \_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<p>
+Repeat the calculations for the point (8,8):
+</p>
+
+<p>
+\(r_1 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~  \theta_1 = \_\_\_\_\_\_\_\_\_\_\) <br />
+\(r_2 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~  \theta_2 = \_\_\_\_\_\_\_\_\_\_\) <br />
+\(r_3 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~  \theta_3 = \_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<p>
+The magnitude of the E-field is given by the formula:
+</p>
+
+<p>
+\[E = k_e \frac{q}{r^2}\]
+</p>
+
+<p>
+Calculate the magnitude of the electric field from each charge at point (0,0), as well as the components of that vector which point in the x and y directions
+</p>
+
+<p>
+\(E_1 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{1x} =\_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{1y} =\_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(E_2 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{2x} =\_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{2y} =\_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(E_3 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{3x} =\_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{3y} =\_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<p>
+Repeat the calculations for the point (8,8):
+</p>
+
+<p>
+\(E_1 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{1x} =\_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{1y} =\_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(E_2 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{2x} =\_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{2y} =\_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(E_3 = \_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{3x} =\_\_\_\_\_\_\_\_\_\_\_ ~~~~ E_{3y} =\_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+
+<p>
+The total electric field at a point is then simply the vector sum of the components of the individual contributions from each charge. Add the components together to obtain the cartesian form of the E-field at each point:
+</p>
+
+<p>
+\(E_{(0,0)} = \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\) <br />
+\(E_{(8,8)} = \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>This process should lead you to find the E-Field (vector) at both points.</li>
+<li>Which direction should the E-field be pointing for the point (0,0) and the point (8,8)?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org536b6f6" class="outline-2">
+<h2 id="org536b6f6"><span class="section-number-2">3.</span> Part 3: Force on a charge</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Now comes the easy part! Lets place a charge at the point (0,0) and find the force which the charge feels. Roll the dice one more time (or choose \(q_0\) randomly):
+</p>
+
+<p>
+Roll 10: \(\_\_\_\_\_\_\_\_\_ \rightarrow q_0\) in \(\mu C\) <br />
+</p>
+
+<p>
+You have already calculated the electric field at the point (0,0), so the force is simple to compute
+</p>
+
+<p>
+\(\vec{F} = q \vec{E}\)
+</p>
+
+<p>
+Calculate the vector components of the force felt by this charge placed at (0,0):
+</p>
+
+<p>
+\(F_{q_0} = \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\) <br />
+</p>
+
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Does the electric field at point (8,8) change when you place the charge at (0,0)?</li>
+<li>Can you calculate the electric field at point (0,0) when the charge is placed there? At which points can the electric field be calculated?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orga1e7244" class="outline-2">
+<h2 id="orga1e7244"><span class="section-number-2">4.</span> Part 4: Stream Plot of the Electric Field</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+\[E = \frac{k_e \, q}{r^2}\]
+</p>
+
+<p>
+A figure of the charges can be created with a computer. In order to do this, another fancy mathematical trick must be played with the force law. The law we have used is simply the magnitude, with the direction being pointed towards (opposite charge) or away (like charge). This direction can be input into the vector force equation by multiplying by \(\vec{r}/|r|\) . This leads to an odd factor of \(r^{3/2}\) :
+</p>
+
+<p>
+\[\vec{E} = \frac{k_e \, q}{((x-x_0)^2 + (y - y_0)^2)^{3/2}} (x-x_0,y-y_0)\]
+</p>
+</div>
+<div id="outline-container-orga7eef67" class="outline-3">
+<h3 id="orga7eef67"><span class="section-number-3">4.1.</span> Sagemath code</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<pre class="src src-python">
+var(<span style="color: #50a14f;">'q x y x0 y0'</span>)
+Ex(<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>) = q/((x-x0)^2 + (y-y0)^2)^(3/2) * (x-x0)
+Ey(<span style="color: #6a1868;">q</span>,<span style="color: #6a1868;">x0</span>,<span style="color: #6a1868;">y0</span>) = q/((x-x0)^2 + (y-y0)^2)^(3/2) * (y-y0)
+
+<span style="color: #6a1868;">q1</span>,<span style="color: #6a1868;">x1</span>,<span style="color: #6a1868;">y1</span> = 5,3,2
+<span style="color: #6a1868;">q2</span>,<span style="color: #6a1868;">x2</span>,<span style="color: #6a1868;">y2</span> = 1,1,1
+<span style="color: #6a1868;">q3</span>,<span style="color: #6a1868;">x3</span>,<span style="color: #6a1868;">y3</span> = 3,2,2
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Stream plot using sagemath</span>
+<span style="color: #6a1868;">plt1</span>=streamline_plot(
+    (Ex(q1,x1,y1) + Ex(q2,x2,y2) + Ex(q3,x3,y3),
+    Ey(q1,x1,y1) + Ey(q2,x2,y2) + Ey(q3,x3,y3) )
+     , (x,-2,4), (y,-1,3),axes=<span style="color: #b751b6;">False</span>,density=2)
+
+<span style="color: #9ca0a4;"># </span><span style="color: #9ca0a4;">Create circles</span>
+<span style="color: #6a1868;">plt1</span>+=circle((x1,y1),q1/10,fill=<span style="color: #b751b6;">True</span>)
+<span style="color: #6a1868;">plt1</span>+=circle((x2,y2),q2/10,fill=<span style="color: #b751b6;">True</span>)
+<span style="color: #6a1868;">plt1</span>+=circle((x3,y3),q3/10,fill=<span style="color: #b751b6;">True</span>)
+show(plt1)
+</pre>
+</div>
+
+<p>
+Please paste this code into <a href="https://sagecell.sagemath.org/">https://sagecell.sagemath.org/</a> to create the electric field stream plot. Replace the values the charges and positions you used in the previous step.
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Show the stream plot to the instructor before moving on.</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org42982e9" class="outline-2">
+<h2 id="org42982e9"><span class="section-number-2">5.</span> Part 5: First look at Gauss&rsquo; Law</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+In the next part of this lab, you will think through the the concept of electric flux, and try to build your intuition around Gauss&rsquo; Law (closed surface containing charge). The electric field could be measured using a Gauss Meter, but an accurate measurement requires somewhat extreme isolation (instead, it is easier to measure Electric Potential, but that is saved for the next lab).
+</p>
+
+<p>
+<b><b>Electric Field (E)</b></b>: Field which surrounds electrically charged objects. The field points from positive charge to negative charge.
+</p>
+
+<p>
+<b><b>Electric Flux</b></b> (\(\Phi_e\)): The amount of field (number of field lines) which passes through a surface. Flux is positive if the field exits the closed surface, and negative if the field enters the closed surface.
+</p>
+
+<p>
+<b><b>Gauss&rsquo; Law</b></b>: The electric flux (\(\Phi_E\)) passing through a surface is proportional to the charge which is enclosed by the surface
+</p>
+
+<p>
+\[\Phi_E = E \, A \, \cos(\theta) = \frac{q_{in}}{\varepsilon_0}\]
+</p>
+</div>
+<div id="outline-container-org6c460a5" class="outline-4">
+<h4 id="org6c460a5">Part 5.1: Flux from a point charge</h4>
+<div class="outline-text-4" id="text-org6c460a5">
+<p>
+Create a sketch of the electric field for a point charge (you choose the sign). Recall the field lines start at positive charge and end at negative charge.
+</p>
+
+
+<p>
+Note: A &ldquo;Gaussian Surface&rdquo; is an imaginary fully enclosed object which describe the surface for the field lines to flow through. The surface is a theoretical construct and does not need to be thought of as a physical object.
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Do the Gaussian surfaces have a negative (into the surface) or positive (out of the surface) electric flux flowing through them?</li>
+<li>If the surface is larger, does the amount of electric flux get larger, smaller or stay the same?</li>
+<li>If the surface is smaller, does the amount of electric flux get larger, smaller or stay the same?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgd7a51df" class="outline-4">
+<h4 id="orgd7a51df">Part 5.2: Charge outside of the surface</h4>
+<div class="outline-text-4" id="text-orgd7a51df">
+<p>
+Now create a Gaussian enclosed surface with no charge inside. Now place a charge just outside of that surface and draw the field lines.
+</p>
+
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Do any field lines enter this surface yet never exit the surface?</li>
+<li>How could you change the system such that field lines start (or end) inside of the box?</li>
+<li>If no charge is enclosed inside of the surface, what is the overall electric flux?</li>
+<li>Can you draw any shape which has a different flux than the box shown above?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org67a2244" class="outline-4">
+<h4 id="org67a2244">Part 5.3: Dipole</h4>
+<div class="outline-text-4" id="text-org67a2244">
+<p>
+A dipole is created when two equal but opposite charges are separated by a distance. Draw the electric field at point P (use the principle of superposition).
+</p>
+
+<p>
+Make a sketch of the electric field lines created by the above dipole.<br />
+</p>
+
+<p>
+Draw a circle which encloses both charges. This will be your Gaussian surface. Add enough field lines such that the surface has multiple field lines which cross it.
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>What is the overall flux through this surface?</li>
+<li>Is the Electric field zero anywhere on the surface?</li>
+<li>Is the flux through the surface zero at any point on the surface?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgda76e44" class="outline-4">
+<h4 id="orgda76e44">Part 5.4: Conducting spherical shell</h4>
+<div class="outline-text-4" id="text-orgda76e44">
+<p>
+Recall: Conductors in electrostatic equilibrium MUST have ZERO Electric Field inside. If there is a field, the charges will feel the force and move around until they reach equilibrium.
+</p>
+
+<p>
+Try to imagine a spherical metal ball which has been hollowed out (try to imagine it as the rind of a watermellon). Now imagine that this hollow sphere is charged similar to the VanDeGraff Generator. Now expand a Gaussian surface from the center radially outward.
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>What is the flux while the surface is smaller than the radius of the inner shell? What is the Electric field inside of the conductor.</li>
+<li>Recall that the E-Field (and thus Flux) must be zero inside of any conductor. Imagine a Gaussian sphere which is larger than the inner radius, but smaller than the outer radius. How much Flux can pass through this surface?</li>
+<li>Can a free charge can reside on the  inside the metal shell?</li>
+<li>If you move the shell outside of the spherical shell, what does the shell look like? What is the equation for the electric field is for this scenario?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>
