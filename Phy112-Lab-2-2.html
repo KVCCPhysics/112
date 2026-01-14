@@ -3,11 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-01-06 Tue 17:32 -->
+<!-- 2026-01-09 Fri 13:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Phy112 Lab2.2</title>
-<meta name="author" content="Patrick Malsom" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -193,6 +192,41 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<base target="_blank">
+<style type="text/css"> blockquote {background:#cdd; padding: 3px 10px; border: 1px solid; }</style>
+<style type="text/css"> .example {background:#FFFCF6; margin-top: -16px;}</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -200,6 +234,271 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">Phy112 Lab2.2</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf7cc1b0">1. Electromagnet</a></li>
+<li><a href="#orgafde484">2. Inductance</a></li>
+<li><a href="#org9da3175">3. Lenz&rsquo;s law (Demo setup)</a></li>
+<li><a href="#org5717bc2">4. Inductance</a></li>
+<li><a href="#org38d723c">5. Resonant Frequency of an LRC circuit (Demo setup)</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf7cc1b0" class="outline-2">
+<h2 id="orgf7cc1b0"><span class="section-number-2">1.</span> Electromagnet</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+In the first part o this lab you will create an electromagnet using an enamel coated wire and a metal rod. This experiment verifies that moving charges (in the form of current) generate a magnetic field. You will modify this electromagnet by changing the number of wraps around the solenoid and by filling the solenoid with a different material.
+</p>
+
+<p>
+A solenoid is simply a coil of closely spaced wires which has a current flowing through it. The current generates a magnetic field inside of the solenoid of magnitude
+</p>
+
+<p>
+\[B = \mu \frac{N}{\ell} I\]
+</p>
+
+<p>
+<b>Important!!! Do not exceed 2 Amps of current</b>. Please ask for help if you wish to exceed this value. The wire will become hot if you leave the power supply running and can possibly burn you or the enamel wire. Please <b>turn your power supply off</b> or adjust the current to zero unless you are currently performing the experiment.
+</p>
+
+<ol class="org-ol">
+<li>Gather an enameled wire, an iron cylinder, and a paperclip from the front of the lab. This wire has a dielectric material (enamel) surrounding its exterior which acts as an insulator so the current does not flow between wraps of the solenoid. Use sandpaper to remove the enamel from the ends of the wire if it is not already.</li>
+
+<li>Wrap the enameled wire around the steel rod 20 times. Make sure these wraps do not overlap each other and are as tightly coiled as possible.</li>
+
+<li>Hook this solenoid to the power supply. When you turn on the power supply the current will make the steel rod magnetized. Adjust the current of the power supply such that you create an electromagnet which can lift a paperclip and record this value.</li>
+</ol>
+
+<p>
+$I =  \_\_\_\_\_\_\_\_\_\_\_\_$<br />
+</p>
+
+<ol class="org-ol">
+<li>Repeat steps 2 and 3 with 40 wraps around the steel rod. Make sure these wraps do not overlap each other and are as tightly coiled as possible. Record the minimum value of the current which can lift the paperclip.</li>
+</ol>
+
+<p>
+$I =  \_\_\_\_\_\_\_\_\_\_\_\_$<br />
+</p>
+
+<ol class="org-ol">
+<li>Repeat steps 2 and 3 with 30 wraps around the steel rod but now overlap the coils of wire. Record the minimum value of the current which can lift the paperclip.</li>
+</ol>
+
+<p>
+$I =  \_\_\_\_\_\_\_\_\_\_\_\_$<br />
+</p>
+
+<ol class="org-ol">
+<li>Remove the iron rod from the electromagnet. Use the value of current you found in step 5 to try to again lift the paperclips. Can you lift them?</li>
+</ol>
+
+<p>
+\[ B_{air} = \mu_0 \frac{N}{\ell} I \qquad \qquad \qquad B_{steel} = \mu_{steel} \frac{N}{\ell} I \]
+</p>
+
+<ol class="org-ol">
+<li>Is the electromagnet weaker when you remove the metal rod? What part of the equation for the magnetic field inside of a solenoid has changed?</li>
+
+<li>Calculate how much stronger the magnetic field is when the iron rod is inserted into the center of a solenoid.</li>
+</ol>
+
+<p>
+$B<sub>steel</sub>/B<sub>air</sub> \_\_\_\_\_\_\_\_\_\_\_\_$<br />
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Was the current different in part 3 and part 4? Explain why using the equation for a solenoid (ask the instructor if you are stuck).</li>
+<li>Use the right hand rule for current to find which end of your electromagnet is North and which is South. Test your findings with a compass.</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgafde484" class="outline-2">
+<h2 id="orgafde484"><span class="section-number-2">2.</span> Inductance</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Now that we all have examined how to create a magnetic field using a solenoid, lets examine how a changing magnetic field can induce a current in a circuit. You have 2 solenoids which can be nested together (larger green and smaller copper) and a metallic rod which fits in the center. Remember that the induced emf (voltage) is given by Faraday&rsquo;s law:
+</p>
+
+<p>
+\[\mathcal{E} = -N \frac{\Delta \Phi_B}{\Delta t}\]
+</p>
+
+<p>
+Hook up the power supply to move current through the thick wire solenoid. This solenoid has a large wire to be able to carry the large current without melting. <b>Do not exceed 1.0 Amps of current</b>. Place the metal rod inside of the solenoid vertically. Use a compass to figure out which end is the north and which is the south pole.
+</p>
+
+<p>
+Connect the thin wire solenoid to the galvanometer (measures current) but not to the power supply. Cycle on the power supply (or connect wire) and observe if there is movement in the galvanometer. Cycle off the power supply (or disconnect wire) and observe the movement of the galvanometer.
+</p>
+
+<p>
+Now lets change a different part of the equation for the magnetic field inside of a solenoid. Lets change the value of \(\mu\). This is easily accomplished by moving the metal rod up and down inside of the solenoid. The galvanometer should deflect one direction and then the other direction.
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+
+<ul class="org-ul">
+<li>Does the galvanometer needle move when the power supply is in a steady state or only when the power is turned on/off?</li>
+<li>What are two ways you can make the magnetic field of the solenoid change? Is one way better than the other?</li>
+<li>Can you insert the rod in any way to minimize the amount of current measured on the galvanometer? How can you make the galvanometer jump very quickly?</li>
+<li>The galvanometer sometimes measures positive and sometimes measures negative current. What does this mean about the direction and/or magnitude of the magnetic flux?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org9da3175" class="outline-2">
+<h2 id="org9da3175"><span class="section-number-2">3.</span> Lenz&rsquo;s law (Demo setup)</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+\[\textnormal{Nature abhors change in magnetic flux}\]
+</p>
+
+<p>
+The instructor will now show a demo of magnetic induction where you can trace the wires and test your understanding of the above phrase. The cart contains a very strong horseshoe magnet which will be the source of the magnetic field. The direction of the magnetic field is displayed on the side of the magnet.
+</p>
+
+<p>
+A wrap of copper wire is connected to a galvanometer and you are asked to predict which direction the needle will deflect. Here is a quick rundown of the thought process
+</p>
+
+<ul class="org-ul">
+<li>imagine the direction of the permanent magnetic field</li>
+<li>think about how flux can increase and how flux can decrese as the loop moves into and out of the permanent magnetic field.</li>
+<li>oppose the change in flux. This answer requires two thoughts: which direction is the magnetic field and is it getting larger or smaller.</li>
+<li>stick your fingers of right hand throught the loop of wire in the direction of &ldquo;opposing the change&rdquo; in flux</li>
+<li>wrap your right-hand fingers around the wires (solenoid) and your thumb will point in the direction of current flow.</li>
+</ul>
+
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Find the instructor with the permanent magnet demo to test your understanding of Lenz&rsquo;s law.</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org5717bc2" class="outline-2">
+<h2 id="org5717bc2"><span class="section-number-2">4.</span> Inductance</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Now you will measure the SI value assigned to an inductor.
+This measurement is made in <b>Henrys</b> and the value is dependent on the geometry of the inductor (this lab uses a solenoid).
+</p>
+
+<p>
+\[L = \frac{\mu N^2 A}{\ell}\]
+</p>
+
+<p>
+These measurements are quite sensitive and require an oscilloscope to be accurate. Plug in the oscilloscope and the function generator. Use the BNC cables to attach the function generator outputs to the oscope inputs on channel 1. Tune the function generator to a frequency of \(14.87~kHz\) and a maximum amplitude of \(0.5~V\). Set the waveform to a square wave.
+</p>
+
+<p>
+Adjust the oscilloscope to fit a few cycles of the square wave in the display.
+</p>
+
+<p>
+Now connect the circuit of the inductor and the resistor in series with the function generator. The current should now flow one direction through L and R and then reverse the flow direction, over and over again.
+</p>
+
+<p>
+Connect the second input of the oscilloscope to measure the voltage over the resistor. Make a rough measurement of the time it takes for the inductor to build up its magnetic field
+</p>
+
+
+<p>
+\[V = \frac{\mathcal{E}}{R} \left( 1 - e^{-t/\tau} \right) \qquad \textnormal{ where }\qquad \tau = \frac{L}{R}\]
+</p>
+
+<p>
+The time constant is approximately the time it takes the circuit to reach 63% of the maximum voltage. Measure the time to reach 63% with the oscilloscope and then measure the resistance of the resistor with a multimeter (ask if you need help, this can be a bit tricky).
+</p>
+
+<p>
+\(\tau = \_\_\_\_\_\_\_\_\_\_\_\_\_\_ \textnormal{seconds}\) <br />
+\(R = \_\_\_\_\_\_\_\_\_\_\_\_\_\_ \Omega\) <br />
+</p>
+
+<p>
+Calculate the inductance of the solenoid with the time constant equation
+</p>
+
+<p>
+\(L = \_\_\_\_\_\_\_\_\_\_\_\_\_\_ \textnormal{Henry}\) <br />
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>How is this type of circuit similar to the RC circuit which uses capacitors? How is it different?</li>
+<li>Is the circuit sensitive to outside effects? Do you think this measurement is accurate?</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org38d723c" class="outline-2">
+<h2 id="org38d723c"><span class="section-number-2">5.</span> Resonant Frequency of an LRC circuit (Demo setup)</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Measure the capacitance of the capacitor with a multimeter
+</p>
+
+<p>
+\(C = \_\_\_\_\_\_\_\_\_\_\_\_\_\_ \textnormal{Farad}\) <br />
+</p>
+
+
+<p>
+Setup a series LRC circuit and place the oscilloscope&rsquo;s voltage probes across the resistor. Also connect an ammeter into the circuit (remember to break the circuit first) and select AC milliamp measurement. Adjust the signal generator up in frequency until you find the current through the ammeter is a maximum.
+</p>
+
+<p>
+Take a number of measurements above and below this maximum and make a plot of the current as a function of frequency. Find the resonance frequency from the graph. You may need to interpolate the point.
+</p>
+
+<p>
+Experimental Resonance Freq \(f_0 = \_\_\_\_\_\_\_\_\_\_\_\_\_\_ Hz\) <br />
+</p>
+
+
+<p>
+\[f_0 = \frac{1}{2 \pi \sqrt{LC}}\]
+</p>
+
+<p>
+\(L = \_\_\_\_\_\_\_\_\_\_\_\_\_\_ \textnormal{Henry}\) <br />
+</p>
+
+<blockquote>
+<p>
+<b>Checkpoint:</b>
+</p>
+<ul class="org-ul">
+<li>Which method of measuring inductance (Resonance or direct measurement) do you think is more accurate? Why?</li>
+<li>How many turns does the inductor (solenoid) have?</li>
+<li>The sensitivity in this circuit is the effect an engineer will leverage to &ldquo;tune&rdquo; an antenna to pick up a very specific frequency (tuning a radio).</li>
+</ul>
+</blockquote>
+</div>
+</div>
 </div>
 </body>
 </html>

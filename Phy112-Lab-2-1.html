@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-01-06 Tue 17:32 -->
+<!-- 2026-01-09 Fri 13:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Phy112 Lab2.1</title>
@@ -193,6 +193,38 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -200,6 +232,54 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">Phy112 Lab2.1</h1>
+<p>
+In this lab, you will explore capacitors and see how they are used in circuits. The capacitor is an extremely important electrical circuit device and are present on almost every real circuit. For direct current circuits, the capacitor creates a large electric field between two conducting surfaces, which serve as a reserve of extra electrons. The capacitor is said to be charging when the E field is increasing, and discharging when the E field is decreasing. For AC circuits these devices also serve as a filter for high or low frequency signals.
+</p>
+
+<p>
+Dissasemble a cap (10 mins)
+</p>
+<ul class="org-ul">
+<li>ceramic disk</li>
+<li>elctrolytic</li>
+</ul>
+<p>
+make a cap (20 mins)
+</p>
+<ul class="org-ul">
+<li>create with aluminum and plasic wrap</li>
+<li>calculate capacitance</li>
+<li>measure with multimeter</li>
+</ul>
+<p>
+Explain how to charge and discharge a cap (5 mins)
+</p>
+<ul class="org-ul">
+<li>charged by placing voltage across the legs</li>
+<li>resistor is recommended as to restrict the charge rate</li>
+<li>current is charge per second, so limit the current to protect the cap from magic smoke</li>
+<li>discharging should be through a low resistance, grounded resistor</li>
+</ul>
+<p>
+create slowly charging circuit (30 mins)
+</p>
+<ul class="org-ul">
+<li>Use a power supply and a large cap with a large resistor</li>
+<li>time constant of \(tau=10\) seconds which requires \(100 \mu F\) with \(100~k \Omega\)</li>
+<li>make a plot of Voltage vs time and identify time to %63 charged/discharged</li>
+<li>start with completely discarged cap, then plug in the voltage source</li>
+</ul>
+<p>
+Observe the quickly charging circuit (10+ mins)
+</p>
+<ul class="org-ul">
+<li>set up on the bench for students who are short on time</li>
+<li>explain an oscilloscope</li>
+<li>explain a signal generator</li>
+<li>ceramic disk cap to switch between charged and discharged</li>
+<li>potentiometer to sweep through different resistances</li>
+<li>Identify the 63% charged/discharged</li>
+</ul>
 </div>
 </body>
 </html>
