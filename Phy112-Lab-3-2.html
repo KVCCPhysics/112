@@ -3,11 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-01-06 Tue 17:32 -->
+<!-- 2026-03-25 Wed 12:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Phy112 Lab3.2</title>
-<meta name="author" content="Patrick Malsom" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -57,6 +56,7 @@
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
   pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-c:before { content: 'C'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -71,7 +71,7 @@
   pre.src-haskell:before { content: 'Haskell'; }
   pre.src-hledger:before { content: 'hledger'; }
   pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
+  pre.src-js:before { content: 'JavaScript'; }
   pre.src-latex:before { content: 'LaTeX'; }
   pre.src-ledger:before { content: 'Ledger'; }
   pre.src-lisp:before { content: 'Lisp'; }
@@ -193,6 +193,38 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -200,6 +232,161 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">Phy112 Lab3.2</h1>
+<p>
+In this lab you will examine many different types of converging and diverging lenses.
+First you will use the measure the focal length of flat converging and diverging lenses and implement the 3 principal rays with the LED light sources.
+Then you will use a converging lens to experimentally verify the thin lens equation and the magnification equation.
+</p>
+<div id="outline-container-org6010556" class="outline-2">
+<h2 id="org6010556">Principal rays</h2>
+<div class="outline-text-2" id="text-org6010556">
+<ol class="org-ol">
+<li>Use the light ray generator with 5 rays to make a measurement of the focal length of both the converging and diverging <b>flat</b> lenses. (Think about how you can measure the focal length using 5 rays that are incident from infinity). Perform this experiment on a sheet of paper and mark your rays and lens. Then use this paper to make a measurement of the focal length.</li>
+</ol>
+
+<p>
+&gt; $f<sub>\text{con}</sub> =$______________
+</p>
+
+<p>
+&gt; $f<sub>\text{div}</sub> =$______________
+</p>
+
+<ol class="org-ol">
+<li>Draw the 3 principal rays on the below pictures with converging and diverging lenses.</li>
+</ol>
+
+\begin{tikzpicture}[]
+\node[text width=3cm] at (1.5,2)   {Object};
+\draw [->,thick] (0,0) -- (0,1.5) ;
+\draw[black,fill=black] (4,0) circle (1mm);
+\draw[black,fill=black] (12,0) circle (1mm);
+\draw[black,fill=black] (8,0) circle (1mm);
+\draw [loosely dashed] (0,0) -- (17,0) ;
+\draw[black,thick] (8,-2) arc (-20:20:6);
+\draw[black,thick] (8,2.1) arc (160:200:6);
+\node[text width=3cm] at (1.5,-.5)   {Converging};
+\node[text width=1cm] at (4.3,-2)   {$f$};
+\node[text width=1cm] at (12.3,-2)   {$f$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[]
+\node[text width=3cm] at (1.5,2)   {Object};
+\draw [->,thick] (0,0) -- (0,1.5) ;
+\draw[black,fill=black] (4,0) circle (1mm);
+\draw[black,fill=black] (12,0) circle (1mm);
+\draw[black,fill=black] (8,0) circle (1mm);
+\draw [loosely dashed] (0,0) -- (17,0) ;
+\draw[black,thick] (7.5,-2.05) arc (-20:20:6);
+\draw[black,thick] (8.5,2.05) arc (160:200:6);
+\draw [-,thick] (7.5,2.05) -- (8.5,2.05) ;
+\draw [-,thick] (7.5,-2.05) -- (8.5,-2.05) ;
+\node[text width=3cm] at (1.5,-.5)   {Diverging};
+\node[text width=1cm] at (4.3,-2)   {$f$};
+\node[text width=1cm] at (12.3,-2)   {$f$};
+\end{tikzpicture}
+
+<ol class="org-ol">
+<li>Use the LED light boxes to experimentally verify that the 3 principal rays behave in the above drawn fashion. Use a piece of paper to mark out the position of the lens and its focal point and set up the 3 LED lights to implement the principal rays. Each group should turn in a page with the direction of the actual paths the 3 rays make.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga0e68bb" class="outline-2">
+<h2 id="orga0e68bb">3 Dimensional Lens</h2>
+<div class="outline-text-2" id="text-orga0e68bb">
+<ol class="org-ol">
+<li>Use the optical stand to construct a 3D thin lens experiment. The stand should have the following sequence of devices: light source, object (arrow), converging lens, paper to view image. An example of this setup was shown at the beginning of lab.</li>
+
+<li><p>
+Measure the focal length of the lens by projecting a focused image at a distant wall. Remember when the object distance (p) is equal to the focal distance (f), the image distance (q) becomes infinite. Focusing the image at a very large distance therefore will give you an accurate way to measure the focal length.
+</p>
+
+<p>
+\(f =\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span>
+</p></li>
+
+<li><p>
+Set up the light bench such that the image is \(2f\) away from the lens. Use a piece of paper on the other side of the lens to locate the distance where the image is crisp (not blurry). Record the object distance (p), image distance (q) and magnification (M)
+</p>
+
+<p>
+\(p=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">\(\qquad q=\) ______________\(\qquad M=\) _</span></span></span></span></span></span></span></span></span></span></span></span>
+</p></li>
+
+<li><p>
+Repeat step 6 every \(5~cm\) for image distances between \(5~cm\) and \(30~cm\). (write <b>No Image</b> if no image can be found)
+</p>
+
+<p>
+\(p=\) \texttt{ 5 cm}\(\qquad q=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{10 cm}\(\qquad q=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{15 cm}\(\qquad q=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{20 cm}\(\qquad q=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{25 cm}\(\qquad q=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{30 cm}\(\qquad q=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M=\) _</span></span></span></span></span></span></span></span>
+</p></li>
+
+<li><p>
+Use the lens equation to calculate the theoretical vale of the image distance and the magnification:
+</p>
+
+<p>
+\[\frac1f = \frac1p + \frac1q \qquad\qquad M = -q/p\]
+</p>
+
+<p>
+\(p=\) \texttt{ 5 cm}\(\qquad q_{\text{theory}}=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M_{\text{theory}}=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{10 cm}\(\qquad q_{\text{theory}}=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M_{\text{theory}}=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{15 cm}\(\qquad q_{\text{theory}}=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M_{\text{theory}}=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{20 cm}\(\qquad q_{\text{theory}}=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M_{\text{theory}}=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{25 cm}\(\qquad q_{\text{theory}}=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M_{\text{theory}}=\) _</span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+\(p=\) \texttt{30 cm}\(\qquad q_{\text{theory}}=\) <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__\(\qquad M_{\text{theory}}=\) _</span></span></span></span></span></span></span></span>
+</p></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf132715" class="outline-2">
+<h2 id="orgf132715">Questions:</h2>
+<div class="outline-text-2" id="text-orgf132715">
+<ol class="org-ol">
+<li>Will you ever be able to find a real image with the diverging lens used in the first part of the experiment?</li>
+
+<li>What is it called when the image distance is negative? Do you think you will be able to project these images on the piece of paper?</li>
+
+<li>Can you think of a way to use another lens to make a real image out of a virtual one?</li>
+</ol>
+</div>
+</div>
 </div>
 </body>
 </html>
